@@ -34,6 +34,7 @@ int main()
 //Aiden
 //is cool
 //Program ended with exit code: 0
+/*
 struct address
 {
    char name[50];
@@ -56,9 +57,44 @@ int main()
 
     return (0);
 }
-
+*/
 //output from above
 //Aiden
 //is
 //Cool
 
+//what micheal provided
+
+typedef struct language {
+    char word[80], reversed[80], pigged[80], shorted[80];
+} WORDS;
+typedef struct phrases {
+    char phrases[1000];
+    WORDS words[1000];
+} PHRASE;
+
+int main () {
+    int i = -1;
+    int n = -1;//this is an integer for the array
+    int wordCount[n];
+
+   char str[80] = "This is www.tutorialspoint.com website";
+   const char s[2] = " ";
+   char *token;
+   
+   /* get the first token */
+   token = strtok(str, s);
+   
+   /* walk through other tokens */
+   while( token != NULL ) {
+      printf( " %s\n", token );
+       i ++;//this is the counter which will print with the word
+       n ++;
+      token = strtok(NULL, s);
+       
+       printf("%d", i);
+    // end of the tokeninizing code
+       
+
+   return(0);
+   }
