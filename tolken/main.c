@@ -76,25 +76,30 @@ typedef struct phrases {
 int main () {
     int i = -1;
     int n = -1;//this is an integer for the array
-    int wordCount[n];
+//    int temp[n];// int array to stor the
+//    char *temp[n] = token;
 
    char str[80] = "This is www.tutorialspoint.com website";
    const char s[2] = " ";
    char *token;
    
+
+    
    /* get the first token */
    token = strtok(str, s);
-   
+
    /* walk through other tokens */
-   while( token != NULL ) {
+   while( token != NULL ) {//runs until there is null or end of line
       printf( " %s\n", token );
+
        i ++;//this is the counter which will print with the word
        n ++;
+       
       token = strtok(NULL, s);
+
        
        printf("%d", i);
     // end of the tokeninizing code
-       
-
+   }
    return(0);
    }
